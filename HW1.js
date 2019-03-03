@@ -55,7 +55,7 @@ let randomNumericToX = Math.floor(Math.random() * x);
 console.log(randomNumericToX);
 
 let accurateCalculations = (0.6 * 10 + 0.7 * 10) / 10;
-console.log(straccurateCalculationsingAB);
+console.log(accurateCalculations);
 
 let numberFromTheLine = parseInt("100$");
 console.log(numberFromTheLine);
