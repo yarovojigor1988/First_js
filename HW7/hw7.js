@@ -79,8 +79,7 @@ for (i=0; i < numberOfNeWLi; i++) {
 
 for (i=0; i < document.links.length; i++) {
     if (document.links[i].closest(`li`) !== null) {
-        document.links[i].insertAdjacentHTML('afterBegin', '<strong>');
-        document.links[i].insertAdjacentHTML('beforeEnd', '</strong>')
+        document.links[i].insertAdjacentHTML('afterBegin', '<strong>Strong</strong>');
     }
 }
 
