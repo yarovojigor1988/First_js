@@ -54,11 +54,12 @@
         e.preventDefault();
 
         if (!title.value || !text.value) return alertAddTodoToView();
-
+        
         addNewTodoToStorage(title.value, text.value);
-        successAddTodoToView();
         form.reset();
         funcDel ();
+        successAddTodoToView();
+
         
     });
 
