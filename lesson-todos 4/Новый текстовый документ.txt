@@ -1,0 +1,13 @@
+document.querySelector('.menu').addEventListener('click', function (e) {
+    let isLi = e.target.parentElement.className === "dropdown-item";
+    if (isLi) {
+      let currentElement = e.target.nextElementSibling;
+      currentElement.classList.toggle('d-none');
+      let subm=document.getElementsByClassName('dropdown-menu');
+      for (var i=0; i<subm.length; i++) {
+          if (subm[i] != currentElement) {
+          subm[i].classList.add('d-none');
+          }
+      }
+    }
+});
