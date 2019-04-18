@@ -2,12 +2,12 @@ const form = document.forms['addTodoForm'];
 
 
 
-
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!title.value) return alertAddTodoToView();
     newsDel();
     console.log(title.value);
+    console.log(country);
     getNews(`https://newsapi.org/v2/top-headlines?q=${title.value}`)
         .then(function (value) {
             console.log(value);
