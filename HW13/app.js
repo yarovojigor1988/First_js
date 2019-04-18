@@ -7,17 +7,21 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!title.value) return alertAddTodoToView();
     newsDel();
-
     console.log(title.value);
-    getNews(`https://newsapi.org/v2/top-headlines?q=${title.value}`, function (response) {
-        console.log(response);
-       
-        newsAddToWiev( newsAdd(response.articles));
-    });
-    form.reset();
- 
+    getNews(`https://newsapi.org/v2/top-headlines?q=${title.value}`)
+        .then(function (value) {
+            console.log(value);
+            return value.articles;
+        }).then((param) => newsAdd(param)).then(newsAddToWiev)
 
+    form.reset();
 });
+// в then пишем имя функции без скобок (не вызываем ее)
+// function (response) {
+//     console.log(response);
+//     newsAddToWiev( newsAdd(response.articles));
+// }
+
 
 function alertAddTodoToView() {
     funcDel ();
