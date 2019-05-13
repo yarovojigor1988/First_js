@@ -40,7 +40,11 @@ module.exports = {
             filename: 'index.html',
             template: './index.html',
             title: 'My App'
-        })
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+            chunkFilename: '[id].css',
+          })
     ],
     mode: 'production'
 };
