@@ -1,10 +1,10 @@
-export class NotFoundComponent {
+export class UserComponent {
     constructor () {
 
     }
     render() {
         return `
-        <div class="not_found">404</div>`
+        <div>User</div>`
     }
     async beforeRender () {
         

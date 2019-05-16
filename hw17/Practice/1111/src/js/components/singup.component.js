@@ -67,6 +67,9 @@ export class SingUpComponent {
         </div>
         `
     }
+    async beforeRender () {
+        
+    }
     afterRender() {
         const form = document.forms['singUpForm'];
         form.addEventListener('submit', function (e) {

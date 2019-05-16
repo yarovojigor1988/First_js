@@ -3,7 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: './js/app.js',
+    entry: {
+        polyfill: 'babel-polyfill',
+        app:'./js/app.js'},
     context: path.resolve(__dirname, 'src'),
     output: {
         filename: 'bundle.js',
@@ -46,5 +48,5 @@ module.exports = {
             chunkFilename: '[id].css',
           })
     ],
-    mode: 'production'
+    mode: 'development'
 };

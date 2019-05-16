@@ -28,5 +28,6 @@
     "lodash": "^4.17.11",
     "popper.js": "^1.14.7"
   },
+  "babel-polyfill": "^6.26.0",
   "description": ""
 }
