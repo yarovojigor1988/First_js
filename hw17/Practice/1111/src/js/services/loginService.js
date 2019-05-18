@@ -7,11 +7,15 @@ export function LoginService(info) {
         headers: {
         'Content-type': 'application/json' 
         }
-    }).then((response) => response.json()).then((response) => {
-    localStorage.setItem('user_token', response.token);  
-    localStorage.setItem('user_id', response.id);
-}).then((responce) => {
-    this.routing.navigate(`/user/${responce.id}`);
+    }).then((response) => response.json())
+    // .then((response) => {
+    // localStorage.setItem('user_token', response.token);  
+    // localStorage.setItem('user_id', response.id)
+    // })
+.then((response) => {
+    console.log(response.id);
+    console.log(this); 
+    this.Routing.navigate(`/user/${response.id}`);
 });
 
 }

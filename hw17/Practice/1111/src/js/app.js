@@ -26,7 +26,7 @@ const router =  () => {
     const url = (request.resourse ? '/' + request.resourse : '/') + (request.id ? '/:id' : '');
     const component = routes[url] || routes['**'];  
 
-    component.beforerender().then(() => {
+    component.beforeRender().then(() => {
         container.innerHTML = component.render(); 
         component.afterRender();
     });
