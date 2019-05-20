@@ -7,6 +7,7 @@ import {ActiveRoute} from './services/active.route.service';
 
 
 import '../css/index.css';
+import { Routing } from './services/routing.service';
 
 const routes = { 
     '/': new HomeComponent(), 
@@ -18,6 +19,9 @@ const routes = {
 }; 
 
 const activeRoute = new ActiveRoute();
+const _routing = new Routing();
+
+
  
 const router =  () => { 
     const container = document.querySelector('app-container'); 

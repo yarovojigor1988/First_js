@@ -9,4 +9,7 @@ export class UserComponent {
     async beforeRender () {
         
     }
+    async afterRender () {
+        
+    }
 }

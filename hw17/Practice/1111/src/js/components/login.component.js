@@ -4,7 +4,7 @@ import {Routing} from '../services/routing.service'
 
 export class LoginComponent {
     constructor () {
-
+        this._routing = new Routing();
     }
     render() {
         return `
@@ -35,8 +35,11 @@ export class LoginComponent {
             }
 
             console.log(loginInfo);
-            LoginService(loginInfo);
+            LoginService(loginInfo).then((response) => {
+                this._routing.navigate(`/user/${response.id}`);
+                console.log()
+            });
 
-        });
+        }.bind(this));
     }
 }
